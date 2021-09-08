@@ -12,7 +12,7 @@ export default function TodoList() {
     const todoRef = ref(database, 'todo/sim-eunji')
     onValue(todoRef, (snapshot) => {
       for(const todo in snapshot.val()) {
-        todoList.push({ todo: snapshot.val()[todo] })
+        todoList.push({ todo: todo })
       }
     })
     setTodoList(todoList)
